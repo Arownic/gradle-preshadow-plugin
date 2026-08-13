@@ -4,7 +4,7 @@ apply plugin:'signing'
 apply plugin:'maven'
 
 wrapper {
-    gradleVersion = '2.4'
+    gradleVersion = '4.5'
 }
 
 buildDir = project.file('target')
@@ -17,14 +17,14 @@ archivesBaseName = 'gradle-preshadow-plugin'
 sourceCompatibility='1.7'
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
     compile localGroovy()
     compile gradleApi()
 
-    compile group:'com.github.jengelman.gradle.plugins', name:'shadow', version:'1.2.1'
+    compile group:'com.github.johnrengelman', name:'shadow', version:'1.2.3'
 }
 
 task sourcesJar(type:Jar) {
